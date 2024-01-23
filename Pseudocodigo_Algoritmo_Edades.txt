@@ -1,0 +1,36 @@
+Proceso Algoritmo_Edades
+
+  totalMayores <- 0
+  totalMenores <- 0
+  hombresMayores <- 0
+  mujeresMayores <- 0
+  totalMujeres <- 0
+  personas vector[50]
+
+  Para i <- 0 Hasta 50 Hacer
+    Escribir "Escriba el sexo y la edad de la persona: "
+    Leer persona
+  FinPara
+
+  Para i <- 0 Hasta 50 Hacer
+    Si (personas[i].edad>=18) Entonces
+      totalmayores <- totalMayores + 1
+      Si (personas[i].sexo == "Hombre") Entonces
+        hombresMayores <- hombresMayores + 1
+      Sino Entonces
+        mujeresMayores <- mujeresMayores + 1
+      FinSi
+    Sino Entonces
+      totalMenores <- totalMenores + 1
+    FinSi
+    Si (personas[i].sexo == "Mujer") Entonces
+      totalMujeres <- totalMujeres + 1
+    FinSi
+  FinPara
+  Escribir "Cantidad mayores: " + totalMayores
+  Escribir "Cantidad menores: " + totalMenores
+  Escribir "Cantidad hombres mayores: " + hombresMayores
+  Escribir "Cantidad mujeres mayores: " + mujeresMayores
+  Escribir "% mayores: " + totalMayores/50*100
+  Escribir "% mujeres: " + totalMujeres/50*100
+FinProceso

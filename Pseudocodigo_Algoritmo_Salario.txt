@@ -1,0 +1,16 @@
+Proceso Algoritmo_Salario
+  Escribir "Cuál es la tarifa del trabajador? "
+  Leer tarifa
+  Escribir "Horas trabajadas por el trabajador? "
+  Leer horasTrabajadas
+
+  Si (horasTrabajadas > 40) Entonces
+    horasExtras = horasTrabajadas - 40
+    precioHorasExtras = horasExtras * (tarifa*1.5)
+    sueldo = 40 * tarifa + precioHorasExtras
+  Sino Entonces
+    sueldo = horasTrabajadas * tarifa
+  FinSi
+
+  Escribir "El sueldo del trabajador es " + sueldo
+FinProceso
